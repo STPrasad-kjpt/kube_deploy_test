@@ -18,7 +18,7 @@ spec:
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8090 
+            - containerPort: 8080 
 # The port that the container is running on in the cluster
 #          env:
 #            - name: DB_HOST
@@ -39,6 +39,6 @@ spec:
     app: kube-deploy-test
   ports:
     - protocol: "TCP"
-      port: 8090 # The port that the service is running on in the cluster
-      targetPort: 8090 # The port exposed by the service
+      port: 8080 # The port that the service is running on in the cluster
+      targetPort: 8080 # The port exposed by the service
   type: NodePort # type of the service.   
