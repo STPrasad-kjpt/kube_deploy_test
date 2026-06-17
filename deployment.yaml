@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: kube_deploy_test
+  name: kube-deploy-test
 spec:
   selector:
     matchLabels:
-      app: kube_deploy_test
+      app: kube-deploy-test
   replicas: 3 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: kube_deploy_test
+        app: kube-deploy-test
     spec:
       containers:
-        - name: kube_deploy_test-container
+        - name: kube-deploy-test-container
           image: kube_deploy_test:1.0
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
@@ -33,10 +33,10 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: kube_deploy_test-svc
+  name: kube-deploy-test-svc
 spec:
   selector:
-    app: kube_deploy_test
+    app: kube-deploy-test
   ports:
     - protocol: "TCP"
       port: 8080 # The port that the service is running on in the cluster
