@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kube-deploy-test-container
-          image: kube_deploy_test:1.0
+          image: thirukjpt/kube_deploy_test:1.0
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
